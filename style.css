@@ -214,7 +214,6 @@ ul li a:hover {
 .new-arrivals-section {
     margin-bottom: 10px;
 }
-
 .video-section {
     margin-top: 10px;
 }
@@ -240,10 +239,12 @@ ul li a:hover {
     scroll-snap-align: start; /* Snap alignment for smooth scrolling */
 }
 
-#move #slide video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+#move #slide video, 
+#move #slide iframe {
+    width: 100%; /* Full screen width */
+    height: 100%; /* Full screen height */
+    object-fit: cover; /* Ensures videos cover the area */
+    border: none; /* Removes iframe border */
 }
 
 
