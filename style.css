@@ -1,0 +1,367 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+header {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-container .logo {
+    width: 80px;
+    height: auto;
+}
+
+.header-container h1 {
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #cbb535;
+}
+
+ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+}
+
+ul li {
+    margin: 0 15px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+ul li a:hover {
+    color: #ffd700;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    .header-container h1 {
+        font-size: 24px;
+    }
+    ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    ul li {
+        margin: 10px 0;
+    }
+}
+
+.about-section,
+.new-arrivals-section,
+.contact-section {
+    margin-bottom: 20px;
+}
+
+.about-container {
+    text-align: center;
+    margin: 0 auto;
+    width: 1080px;
+}
+
+.about-container h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.about-container p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+@media (max-width: 768px) {
+    .about-container h2 {
+        font-size: 24px;
+    }
+    .about-container p {
+        font-size: 16px;
+    }
+}
+
+.new-arrivals-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #000;
+    color: #fff;
+}
+
+.new-arrivals-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.new-arrivals-section p {
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+.featured-cars {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 10px;
+    overflow-x: auto;
+}
+
+.car-card {
+    flex: 0 0 23%;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.car-card:hover {
+    transform: translateY(10px);
+}
+
+.car-card:active {
+    transform: scale(0.98);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.car-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.car-card h3 {
+    margin: 10px 0;
+    color: #222;
+    font-size: 22px;
+}
+
+.car-card p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.explore-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #cbb535;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s;
+}
+
+.explore-button:hover {
+    background: #ffd700;
+}
+
+@media (max-width: 768px) {
+    .car-card {
+        flex: 0 0 48%;
+    }
+}
+
+@media (max-width: 480px) {
+    .car-card {
+        flex: 0 0 100%;
+    }
+}
+
+.new-arrivals-section {
+    margin-bottom: 10px;
+}
+
+.video-section {
+    margin-top: 10px;
+}
+
+#move {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory; /* Enables snap scrolling */
+    white-space: nowrap;
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+#move #slide {
+    flex: 0 0 100vw; /* Ensures each slide takes up the full viewport width */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start; /* Snap alignment for smooth scrolling */
+}
+
+#move #slide video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.contact-section {
+    text-align: center;
+    background-color: #000;
+    padding: 50px 20px;
+}
+
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #fff;
+}
+
+fieldset {
+    border: 2px solid #fff;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #000;
+}
+
+legend {
+    font-size: 24px;
+    color: #cbb535;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    font-weight: bold;
+    color: #fff;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background: #cbb535;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-form button:hover {
+    background: #ffd700;
+}
+
+.contact-info {
+    text-align: center;
+    color: #fff;
+}
+
+.contact-info h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    font-size: 18px;
+}
+
+footer {
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.footer-content p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.footer-nav {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+.footer-nav li {
+    display: inline;
+}
+
+.footer-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.footer-nav a:hover {
+    color: #ffd700;
+    transform: scale(1.1);
+}
